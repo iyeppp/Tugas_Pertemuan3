@@ -1,0 +1,24 @@
+program kalkulator;
+uses crt;
+
+var bil1,bil2,hasil : real;
+    pilih : integer;
+
+begin
+clrscr;
+    writeln('1. Penjumlahan');
+    writeln('2. Pengurangan');
+    writeln('3. Perkalian');
+    writeln('4. Pembagian');
+    write('Pilih operasi aritmatika yang ingin digunakan : '); readln(pilih);
+    write('Masukkan bilangan pertama : '); readln(bil1);
+    write('Masukkan bilangan kedua   : '); readln(bil2);
+
+    case pilih of
+    1 : hasil := bil1 + bil2;
+    2 : hasil := bil1 - bil2;
+    3 : hasil := bil1 * bil2;
+    4 : hasil := bil1 / bil2;
+    end;
+    writeln('Hasil operasi adalah : ', hasil:5:3);
+end.
