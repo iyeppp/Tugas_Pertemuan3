@@ -1,0 +1,19 @@
+program diskon;
+uses crt;
+
+var belanja, hasil : real;
+
+begin
+clrscr;
+    write('Masukkan total belanja : ');
+    readln(belanja);
+    if (belanja >= 1000000) then
+        hasil := belanja / 100 * 70
+    else if (belanja >=500000) then
+        hasil := belanja / 100 * 80
+    else if (belanja >=100000) then
+        hasil := belanja / 100 * 90
+    else 
+        hasil := belanja;
+    writeln('Total yang harus kamu bayar adalah : ', hasil:0:0);
+end.
