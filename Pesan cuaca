@@ -1,0 +1,23 @@
+program cuaca;
+uses crt;
+
+var suhu : real;
+    hasil : string;
+
+begin
+clrscr;
+    write('Masukkan suhu hari ini dalam Celcius : '); 
+    readln(suhu);
+
+    if (suhu > 35) then
+        hasil := '"Cuaca sangat panas, hindari sinar matahari langsung!"'
+    else if (suhu >= 26) then
+        hasil := '"Cuaca hangat, tetap terhidrasi!"'
+    else if (suhu >= 16) then
+        hasil := '"Cuaca nyaman, cocok untuk jalan-jalan"'
+    else if (suhu >= 0) then
+        hasil := '"Cuaca dingin, pakai jaket ya!"'
+    else 
+        hasil := '"Cuaca sangat dingin, jangan lupa pakai jaket tebal!"';
+    writeln(hasil);
+end.
